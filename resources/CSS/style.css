@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Grape Nuts', cursive;
+}
+
+body {
+  font-family: 'Grape Nuts', cursive;
+  color: lightyellow;
+  text-shadow: black 5px 5px 10px;
+  background-color: #5D939E;
+}
+
+h1 {
+  color: lightyellow;
+  text-align: center;
+  padding: 15px 30px;
+  text-shadow: black 5px 5px 10px;
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+#main {
+  display: flex; 
+  justify-content: center;
+}
+
+label {
+  margin-left: 10px;
+  line-height: 200%;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: lightyellow;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  background-color: #5D939E;
+  height: auto;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+} 
+
+.nav-container input[type="checkbox"]:checked ~ body main .menu {
+  transform: translateX(0);
+}
+
+/* container */
+#section {
+  background-color: #5D939E;
+  padding-bottom: 100px;
+  position:relative;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 8rem);
+  grid-template-rows: repeat(4, 8rem);
+  grid-gap: 20px;
+}
+
+/* CARDS */
+.card {
+  position:relative;
+  transform-style: preserve-3d;
+  transition: all 1s;
+  perspective: 800px;
+}
+
+.face, .back {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #5D939E;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  box-shadow: black 5px 5px 10px;
+  pointer-events: none;
+}
+
+.face {
+  transform: rotateY(180deg);
+}
+
+.back {
+  position: absolute ;
+  background-image: linear-gradient(to bottom right, lightyellow , skyblue);
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+}
+
+/* YOU WIN */
+#youWin {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px; 
+  margin-left: -10rem; 
+  z-index: 5;
+  width: 20rem;
+  height: 16rem;
+  background-color: yellow;
+  border: 4px ridge goldenrod;
+  backface-visibility: hidden;
+  box-shadow: goldenrod 0 0 300px 40px; 
+  pointer-events: none;
+ }
+
+#youWin h2 {
+  color: lightgoldenrodyellow;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px black, 0 0 25px darkgoldenrod, 0 0 5px darkred;
+  padding: 2rem 0;
+}
+
+#youWin p {  
+  font-weight: bolder;
+  text-shadow: black 1px 1px;
+  color: orange;
+  font-size: larger;
+}
