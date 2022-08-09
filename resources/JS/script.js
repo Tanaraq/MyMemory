@@ -8,7 +8,7 @@ let matchedCards = '';
 
 playerMoves.textContent = movesMade;
 
-// GET DATA-ARRAY
+//  GET DATA-ARRAY
 let cardData = [];
 const getData = ()=> {
       for (let i=1; i<=sets; i++){
@@ -19,7 +19,7 @@ const getData = ()=> {
    return cardData;
 }
 
-//CREATE CARDS:
+//  CREATE CARDS:
 const cardGenerator = () =>{
     getData();
     console.log(cardData); 
