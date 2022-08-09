@@ -20,5 +20,5 @@ HTML, CSS and lots of JavaScript
 
 ### Features that I want to add:
 
-* the possibilitie to choose your own difficulty -setting (ranging form 8 to 20 cards)
+* the possibility to choose your own difficulty-setting (ranging form 8 to 20 cards)
 * the possibility to upload your own pictures (as requested by family-members!)
