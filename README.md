@@ -4,12 +4,12 @@
 
 *Programming silly games is a great way to hone your programming skills!*\
 Here's one of mine.\
-Since I like to travel a lot, I made a Memory game with my own pictures.
+Since I like to travel a lot, I made a Memory game with my own travel pictures.
 
 
 ### Languages used:
 
-HTML, CSS and lots of JavaScript
+HTML, CSS and JavaScript
 
 
 ### What I learned from this project:
